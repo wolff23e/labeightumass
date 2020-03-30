@@ -1,4 +1,5 @@
-const url = "http://localhost:8080";
+const url = "https://random-words-emmawolffumass.herokuapp.com";
+
 
 function counterCreate() {
   (async () => {

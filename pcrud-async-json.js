@@ -68,7 +68,7 @@ server.on('request', async (request, response) => {
     let options = url.parse(request.url, true).query;
     // response.write(JSON.stringify(options));
 
-    / Heroku mod start
+    // Heroku mod start
    if (request.url.endsWith("/index.html")) {
        fs.readFile('static/pcrud-interactive.html', null, function (error, data) {
            if (error) {
@@ -121,4 +121,5 @@ server.on('request', async (request, response) => {
     }
     response.end();
 });
-server.listen(8080);
+server.listen(process.env.PORT);
+
